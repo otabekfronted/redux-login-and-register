@@ -8,6 +8,7 @@ import { login, logout, isAuthReadyChanges } from "./features/userSlice";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
+import ProtectedRoutes from "./components/ProtectedRoutes";
 
 function App() {
     const dispatch = useDispatch();
@@ -36,7 +37,7 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
             </Routes>
